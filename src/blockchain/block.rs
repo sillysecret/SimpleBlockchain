@@ -3,11 +3,10 @@ use time::Date;
 use serde::Serialize;
 time::serde::format_description!(date_format, Date, "[year]-[month]-[day]");
 
-
-#[derive(Serialize)]
+#[derive(Serialize,Clone,Debug)]
 pub struct Header {
-    nonce: i32,
-    block_hash: String,
+    pub nonce: i32,
+    pub block_hash: String,
 }
 
 impl Header {
@@ -20,12 +19,12 @@ impl Header {
     }
 }
 
-#[derive(Serialize)]
+#[derive(Serialize,Clone,Debug)]
 pub struct Payload {
-    sequence: i32,
-    timestamp: Date,
-    data: String,
-    previous_hash: String,
+    pub sequence: i32,
+    pub timestamp: Date,
+    pub data: String,
+    pub previous_hash: String,
 }
 
 
@@ -43,10 +42,10 @@ impl Payload {
     }
 }
 
-#[derive(Serialize)]
+#[derive(Serialize,Clone,Debug)]
 pub struct Block {
-    header: Header,
-    payload: Payload,
+    pub header: Header,
+    pub payload: Payload,
 }
 
 impl Block {
