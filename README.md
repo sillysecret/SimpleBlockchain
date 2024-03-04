@@ -68,6 +68,12 @@ pub fn isHashProofed(hash: String, difficulty: i32, prefix: String) -> bool {
 - Ao fazer isso, a função contribui para a segurança e integridade da blockchain, tornando-a resistente a fraudes e ataques maliciosos.
 
 ### Verificar prova:
+```rust
+pub fn isHashProofed(hash: String, difficulty: i32, prefix: String) -> bool {
+    let check = prefix.repeat(difficulty as usize);
+    hash.starts_with(&check)
+}
+```
 
 **Como funciona:**
 - A função verifica se um hash começa com um prefixo específico, repetido várias vezes de acordo com a dificuldade desejada.
