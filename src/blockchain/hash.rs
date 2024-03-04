@@ -1,7 +1,7 @@
 use crypto_hash::{hex_digest, Algorithm};
 use std::convert::AsRef;
 
-// A função hash em Rust
+
 pub fn hash(data: impl AsRef<[u8]>) -> String {
     let data = data.as_ref();
     let hashed_data = hex_digest(Algorithm::SHA256, data);
