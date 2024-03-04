@@ -53,7 +53,11 @@ pub fn isHashProofed(hash: String, difficulty: i32, prefix: String) -> bool {
 }
 ```
 ### Como funciona a prova de trabalho(PoW) e mineração:
-
+```rust
+   pub fn mineblock(&mut self,Payload : Payload) -> Result<block::Block,()>{
+       // Implementação da função de mineração
+    }
+```
 **Como funciona:**
 - A função `mineblock` itera por diferentes valores de nonce (um número usado apenas uma vez) até encontrar um hash válido para um novo bloco.
 - Em cada iteração, o hash do payload fornecido é concatenado com o nonce atual para calcular um novo hash.
