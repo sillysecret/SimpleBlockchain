@@ -62,6 +62,7 @@ pub fn isHashProofed(hash: String, difficulty: i32, prefix: String) -> bool {
 - A função `mineblock` itera por diferentes valores de nonce (um número usado apenas uma vez) até encontrar um hash válido para um novo bloco.
 - Em cada iteração, o hash do payload fornecido é concatenado com o nonce atual para calcular um novo hash.
 - Esse processo continua até que um hash adequado seja encontrado, que atenda aos critérios de dificuldade especificados pela função `isHashProofed`.
+
 **Propósito:**
 - O propósito da função `mineblock` é adicionar novos blocos à blockchain de forma segura e confiável.
 - Ela utiliza o mecanismo de prova de trabalho (Proof of Work - PoW) para garantir que apenas blocos válidos sejam adicionados à blockchain.
@@ -78,6 +79,7 @@ pub fn isHashProofed(hash: String, difficulty: i32, prefix: String) -> bool {
 **Como funciona:**
 - A função verifica se um hash começa com um prefixo específico, repetido várias vezes de acordo com a dificuldade desejada.
 - Se o hash atender a essa condição, a função retorna verdadeiro, indicando que o hash atende aos critérios de dificuldade. Caso contrário, retorna falso.
+
 **Propósito:**
 - A função `isHashProofed` é usada para garantir que um hash calculado atenda aos requisitos de dificuldade estabelecidos pela prova de trabalho.
 - Isso é essencial para validar a autenticidade de um bloco minerado e garantir que apenas blocos válidos sejam adicionados à blockchain.
