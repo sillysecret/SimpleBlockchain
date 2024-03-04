@@ -85,7 +85,13 @@ A estrutura `Blockchain` é o coração de nosso sistema blockchain. Ela gerenci
 - **Método `push_block`:** Adiciona um bloco à lista de blocos da blockchain.
 - **Método `print_blockchain`:** Imprime a blockchain na saída padrão para visualização.
 
-##New blockchain-let mut blockchain = blockchain::Blockchain::new(4, "0".to_string());-:
+## New blockchain:
+
+```rust
+fn main() {
+    let mut blockchain = blockchain::Blockchain::new(4, "0".to_string());
+}
+```
 **Como funciona:**
 - O método `new` é o construtor da estrutura Blockchain e é chamado para criar uma nova instância da blockchain.
 - Ele recebe como parâmetros a dificuldade desejada e o prefixo para a prova de trabalho.
