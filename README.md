@@ -10,7 +10,7 @@ Prova de Trabalho (Proof of Work): Implementação de um algoritmo de prova de t
 
 Hashing Criptográfico: Utilização de funções de hash criptográfico, como SHA-256, para gerar e verificar os hashes dos blocos.
 
-Testes Unitários: Inclusão de testes unitários para garantir a correção e a robustez do código.
+
 
 ## Como Usar:
 Clone o repositório para sua máquina local.
