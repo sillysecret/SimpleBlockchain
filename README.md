@@ -85,6 +85,21 @@ A estrutura `Blockchain` é o coração de nosso sistema blockchain. Ela gerenci
 - **Método `push_block`:** Adiciona um bloco à lista de blocos da blockchain.
 - **Método `print_blockchain`:** Imprime a blockchain na saída padrão para visualização.
 
+##New blockchain-let mut blockchain = blockchain::Blockchain::new(4, "0".to_string());-:
+**Como funciona:**
+- O método `new` é o construtor da estrutura Blockchain e é chamado para criar uma nova instância da blockchain.
+- Ele recebe como parâmetros a dificuldade desejada e o prefixo para a prova de trabalho.
+- No início do método, uma nova instância da blockchain é criada com uma lista de blocos vazia.
+- Em seguida, o método chama a função `create_genesis_block` para gerar o bloco de gênese inicial da blockchain.
+- Após a criação do bloco de gênese, a instância da blockchain é retornada como resultado.
+**Propósito:**
+- O propósito do método `new` é inicializar uma nova blockchain com os parâmetros especificados, como dificuldade e prefixo de prova de trabalho.
+- Ele é responsável por criar a estrutura inicial da blockchain, incluindo a adição do bloco de gênese.
+- Ao criar a blockchain, o método estabelece as bases para o funcionamento da rede, garantindo que o primeiro bloco seja criado corretamente e que a mineração possa começar a partir desse ponto.
+
+
+
+
 ## Conclusão
 
 Construir uma blockchain nos permite explorar os conceitos fundamentais por trás dessa tecnologia. Compreender os componentes básicos, como cabeçalhos, payloads e blocos, e as funcionalidades essenciais, como funções hash e prova de trabalho, é fundamental para criar uma blockchain robusta e segura.
